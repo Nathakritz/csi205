@@ -1,0 +1,65 @@
+#container {
+    border: 1px solid black;
+    margin: 10px auto;
+    width: fit-content;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: #f8f9fa;
+}
+
+#field {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 10px;
+    background-position: center;
+    /* แก้ไข: ใช้ /images/ เพื่ออ้างอิงจากโฟลเดอร์ public */
+    background-image: url(Image/wood.jpg);
+    height: 400px;
+    width: 600px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+}
+
+#control {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#control .btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#control .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+#control .btn:active {
+    transform: scale(0.95);
+}
+
+#ball {
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: aliceblue;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 0;
+    top: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: float 3s ease-in-out infinite, spin 2s linear infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
