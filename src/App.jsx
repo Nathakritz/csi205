@@ -25,8 +25,7 @@ function App() {
   };
 
   return (
-    
-    <Router basename="/csi205/">
+    <Router>
       <Navbar isLoggedIn={isLoggedIn} username={username} onLogout={handleLogout} />
       <div style={{ padding: "1rem" }}>
         <Routes>

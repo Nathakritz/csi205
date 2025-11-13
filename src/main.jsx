@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       { path: "cart", element: <Cart /> },
     ],
   },
-], { basename: "/csi205/" }); // <--- จุดสำคัญคือบรรทัดนี้ครับ
+], { basename: "/csi205" }); // <--- จุดสำคัญคือบรรทัดนี้ครับ
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
