@@ -25,7 +25,8 @@ function App() {
   };
 
   return (
-    <Router>
+    // ✅ แก้ไขตรงนี้: เติม basename="/Work205"
+    <Router basename="/Work205">
       <Navbar isLoggedIn={isLoggedIn} username={username} onLogout={handleLogout} />
       <div style={{ padding: "1rem" }}>
         <Routes>
